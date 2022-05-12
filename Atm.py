@@ -13,7 +13,7 @@ while security_code != input_password:
     if password_attempt <= 3:
         print ("Enter Your Code")
         input_password = int(input())
-
+    
     else:
         is_password_lock = True
     password_attempt = password_attempt + 1
@@ -21,6 +21,8 @@ while security_code != input_password:
     if is_password_lock:
         print("Account is aborted due to exceed of limit")
         sys.exit()
+    elif security_code != input_password:
+        print("Wrong code....Please Try Again")        
     elif security_code == input_password:
         print("Login successful")
         break
@@ -99,3 +101,6 @@ while True:
                 break
         else:
             print("Invalid digit")
+            
+    else:
+        print("Invalid digit.... Please press 1 or 2  to continue!!!")
