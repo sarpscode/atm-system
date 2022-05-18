@@ -15,10 +15,12 @@ while True :
         border_line_block = True
     amount_attempt = amount_attempt + int(amount)
         
-    if border_line_block:
+    if border_line_block == True:
         tax = percentage * amount
         print("Your E-Levy is: GHs " + str(tax) + "...... Thank You")
         break
+    elif amount_attempt < 100:
+        print("Your E-Levy is GHs 0.00")
        
     elif amount > low_amount:
         tax = percentage * amount
